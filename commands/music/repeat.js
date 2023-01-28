@@ -5,7 +5,23 @@
  * @version 0.0.1
  */
 
+/**
+ * @type {import('../../../typings').SlashInteractionCommand}
+ */
+
 module.exports = {
+
+	data: new SlashCommandBuilder()
+		.setName("repeat")
+		.setDescription(
+			"Repeat the song."
+		)
+		.addStringOption((option) =>
+			option
+				.setName("command")
+				.setDescription("The specific command to see the info of.")
+		),
+
   name: 'repeat',
   aliases: ['loop', 'rp'],
   inVoiceChannel: true,

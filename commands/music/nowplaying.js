@@ -5,7 +5,23 @@
  * @version 0.0.1
  */
 
+/**
+ * @type {import('../../../typings').SlashInteractionCommand}
+ */
+
 module.exports = {
+
+	data: new SlashCommandBuilder()
+		.setName("nowplaying")
+		.setDescription(
+			"View the currently playing song."
+		)
+		.addStringOption((option) =>
+			option
+				.setName("command")
+				.setDescription("The specific command to see the info of.")
+		),
+
   name: 'nowplaying',
   aliases: ['np'],
   inVoiceChannel: true,

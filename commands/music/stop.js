@@ -5,7 +5,23 @@
  * @version 0.0.1
  */
 
+/**
+ * @type {import('../../../typings').SlashInteractionCommand}
+ */
+
 module.exports = {
+
+  data: new SlashCommandBuilder()
+  .setName("stop")
+  .setDescription(
+    "Stop the bot's music."
+  )
+  .addStringOption((option) =>
+    option
+      .setName("command")
+      .setDescription("The specific command to see the info of.")
+  ),
+
   name: 'stop',
   aliases: ['disconnect', 'leave'],
   inVoiceChannel: true,

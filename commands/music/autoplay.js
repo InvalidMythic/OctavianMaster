@@ -5,8 +5,23 @@
  * @version 0.0.1
  */
 
+/**
+ * @type {import('../../../typings').SlashInteractionCommand}
+ */
 
 module.exports = {
+
+  data: new SlashCommandBuilder()
+  .setName("autoplay")
+  .setDescription(
+    "Toggle the bot to auto play songs."
+  )
+  .addStringOption((option) =>
+    option
+      .setName("command")
+      .setDescription("The specific command to see the info of.")
+  ),
+
   name: 'autoplay',
   inVoiceChannel: true,
   run: async (client, message) => {

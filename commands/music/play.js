@@ -5,7 +5,23 @@
  * @version 0.0.1
  */
 
+/**
+ * @type {import('../../../typings').SlashInteractionCommand}
+ */
+
 module.exports = {
+
+  data: new SlashCommandBuilder()
+  .setName("play")
+  .setDescription(
+    "List a song to play."
+  )
+  .addStringOption((option) =>
+    option
+      .setName("command")
+      .setDescription("The specific command to see the info of.")
+  ),
+
   name: 'play',
   aliases: ['p'],
   inVoiceChannel: true,

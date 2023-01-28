@@ -5,7 +5,23 @@
  * @version 0.0.1
  */
 
+/**
+ * @type {import('../../../typings').SlashInteractionCommand}
+ */
+
 module.exports = {
+
+  data: new SlashCommandBuilder()
+  .setName("playskip")
+  .setDescription(
+    "Skip to a specific song."
+  )
+  .addStringOption((option) =>
+    option
+      .setName("command")
+      .setDescription("The specific command to see the info of.")
+  ),
+
   name: 'playskip',
   aliases: ['ps'],
   inVoiceChannel: true,
