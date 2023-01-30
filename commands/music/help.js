@@ -13,7 +13,7 @@ const Discord = require('discord.js')
 module.exports = {
   name: 'musichelp',
   aliases: ['h', 'cmd', 'command'],
-  run: async (client, message) => {
+  run: async (client, message, args) => {
     message.channel.send({
       embeds: [
         new Discord.EmbedBuilder()
