@@ -6,22 +6,10 @@
  */
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import('../../typings').LegacyCommand}
  */
 
 module.exports = {
-
-  data: new SlashCommandBuilder()
-  .setName("stop")
-  .setDescription(
-    "Stop the bot's music."
-  )
-  .addStringOption((option) =>
-    option
-      .setName("command")
-      .setDescription("The specific command to see the info of.")
-  ),
-
   name: 'stop',
   aliases: ['disconnect', 'leave'],
   inVoiceChannel: true,

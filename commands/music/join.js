@@ -6,24 +6,12 @@
  */
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import('../../typings').LegacyCommand}
  */
 
 const { Constants } = require('discord.js')
 
 module.exports = {
-
-  data: new SlashCommandBuilder()
-  .setName("join")
-  .setDescription(
-    "Tell the bot to join your channel."
-  )
-  .addStringOption((option) =>
-    option
-      .setName("command")
-      .setDescription("The specific command to see the info of.")
-  ),
-
   name: 'join',
   aliases: ['move'],
   run: async (client, message, args) => {

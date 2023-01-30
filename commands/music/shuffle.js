@@ -6,22 +6,10 @@
  */
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import('../../typings').LegacyCommand}
  */
 
 module.exports = {
-
-  data: new SlashCommandBuilder()
-  .setName("shuffle")
-  .setDescription(
-    "Shuffle the playlist."
-  )
-  .addStringOption((option) =>
-    option
-      .setName("command")
-      .setDescription("The specific command to see the info of.")
-  ),
-
   name: 'shuffle',
   inVoiceChannel: true,
   run: async (client, message) => {

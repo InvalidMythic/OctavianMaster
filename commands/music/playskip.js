@@ -6,22 +6,10 @@
  */
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import('../../typings').LegacyCommand}
  */
 
 module.exports = {
-
-  data: new SlashCommandBuilder()
-  .setName("playskip")
-  .setDescription(
-    "Skip to a specific song."
-  )
-  .addStringOption((option) =>
-    option
-      .setName("command")
-      .setDescription("The specific command to see the info of.")
-  ),
-
   name: 'playskip',
   aliases: ['ps'],
   inVoiceChannel: true,

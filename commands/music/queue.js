@@ -6,22 +6,10 @@
  */
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import('../../typings').LegacyCommand}
  */
 
 module.exports = {
-
-	data: new SlashCommandBuilder()
-		.setName("listqueue")
-		.setDescription(
-			"List the current queue."
-		)
-		.addStringOption((option) =>
-			option
-				.setName("command")
-				.setDescription("The specific command to see the info of.")
-		),
-
   name: 'queue',
   aliases: ['q'],
   run: async (client, message) => {
